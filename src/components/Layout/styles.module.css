@@ -1,0 +1,59 @@
+.thirteen {
+  position: relative;
+}
+
+.thirteen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  padding: 25px 10px;
+  margin-left: 16px;
+  transform: translateZ(0);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px -1px #0000001a;
+}
+
+.thirteen::before,
+.thirteen::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.thirteen::after {
+  inset: 0;
+  padding: 1px;
+  border-radius: 12px;
+  background: linear-gradient(to bottom right, rgba(var(--tile-start-rgb), 1), rgba(var(--tile-end-rgb), 1));
+  background-clip: content-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.welcome {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

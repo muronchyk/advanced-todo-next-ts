@@ -1,0 +1,33 @@
+:root {
+  --color-indigo: #2c3e50;
+  --blue-magenta: #613de6;
+  --blue-magenta-light: #613de633;
+  --black-hover: #0000000c;
+  --black-hover-light: #0000000a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--color-indigo);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: var(--primary-font);
+}
