@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import classNames from 'classnames';
@@ -7,12 +7,10 @@ import api from '@/services/api';
 import { Todo } from '@/types/todo';
 import Button from '@/components/Button';
 import Input from '@/components/Input';
-
-import styles from '@/styles/home.module.css';
 import { useIsMounted } from '@/services/hooks';
 import AddIcon from '@/assets/add.svg';
 import CloseIcon from '@/assets/close.svg';
-import Link from 'next/link';
+import styles from '@/styles/home.module.css';
 
 interface HomeProps {
   items: Todo[];
@@ -59,7 +57,6 @@ export default function Home({ items }: HomeProps) {
         <h3>Today Task</h3>
         <Button onClick={handleAddClick}>Add</Button>
       </div>
-      <Link href="/todos">Todos link</Link>
       <form onSubmit={handleSubmit} className={classNames(styles.form, { [styles.active]: inputActive })}>
         <Input name="add" placeholder="Enter title" ref={inputRef} maxLength={80} />
         <Button variant="icon" type="submit">
